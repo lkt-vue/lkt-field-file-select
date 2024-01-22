@@ -1,0 +1,14 @@
+.lkt-field-file-select {
+  display: flex;
+  gap: var(--gap);
+  align-items: end;
+}
+
+.lkt-field-file-select .lkt-field-select {
+  width: 100%;
+}
+
+.lkt-field-file-select .lkt-field-file {
+  width: var(--input-height);
+  height: var(--input-height);
+}
