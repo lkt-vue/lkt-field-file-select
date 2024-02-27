@@ -2,6 +2,7 @@ import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 
 const src = resolve(__dirname, 'src');
+const outDir = resolve(__dirname, 'build');
 const test = resolve(__dirname, 'test');
 const snapshots = resolve(__dirname, 'snapshots');
 
@@ -14,8 +15,10 @@ export default {
         lib: {
             entry: `${ src }/index.ts`,
             name: 'LktFieldFileSelect',
-            fileName: (format) => `lkt-field-file-select.${ format }.js`
+            fileName: 'build',
+            formats: ['es']
         },
+        outDir,
         minify: true,
         rollupOptions: {
             external: [

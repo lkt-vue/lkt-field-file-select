@@ -2,7 +2,7 @@ import { defineComponent as b, ref as a, watch as h, resolveComponent as n, open
 import { generateRandomString as D } from "lkt-string-tools";
 import V from "lkt-field-select";
 import M from "lkt-field-file";
-const F = { class: "lkt-field-file-select" }, R = /* @__PURE__ */ b({
+const R = { class: "lkt-field-file-select" }, F = /* @__PURE__ */ b({
   __name: "LktFieldFileSelect",
   props: {
     modelValue: { type: String, default: "" },
@@ -43,7 +43,9 @@ const F = { class: "lkt-field-file-select" }, R = /* @__PURE__ */ b({
     searchPlaceholder: { type: String, default: "" },
     useResourceSlot: { type: String, default: "" },
     multipleDisplay: { type: String, default: "list" },
+    // list || inline
     multipleDisplayEdition: { type: String, default: "inline" }
+    // list || inline
   },
   emits: ["update:modelValue"],
   setup(e, { emit: u }) {
@@ -55,7 +57,7 @@ const F = { class: "lkt-field-file-select" }, R = /* @__PURE__ */ b({
     };
     return (l, t) => {
       const g = n("lkt-field-select"), S = n("lkt-field-file");
-      return r(), k("div", F, [
+      return r(), k("div", R, [
         B(g, {
           modelValue: o.value,
           "onUpdate:modelValue": t[0] || (t[0] = (d) => o.value = d),
@@ -101,7 +103,7 @@ const F = { class: "lkt-field-file-select" }, R = /* @__PURE__ */ b({
   }
 }), U = {
   install: (e) => {
-    e.component("lkt-field-file-select") === void 0 && e.component("lkt-field-file-select", R), e.component("lkt-field-select") === void 0 && e.use(V), e.component("lkt-field-file") === void 0 && e.use(M);
+    e.component("lkt-field-file-select") === void 0 && e.component("lkt-field-file-select", F), e.component("lkt-field-select") === void 0 && e.use(V), e.component("lkt-field-file") === void 0 && e.use(M);
   }
 };
 export {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ref, watch} from "vue";
 import {generateRandomString} from "lkt-string-tools";
-import {Option} from "lkt-field-select";
+import {Option} from "lkt-field-select/dist/index";
 import {HTTPResponse} from "lkt-http-client";
 
 const props = defineProps({

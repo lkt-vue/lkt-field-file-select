@@ -1,11 +1,11 @@
 import "./../lkt-field-file-select.scss"
 
-import {App} from "vue";
+import {App, Plugin} from "vue";
 import {default as fieldFileSelect} from "./lib-components/LktFieldFileSelect.vue";
 import LktFieldSelect from "lkt-field-select";
 import LktFieldFile from "lkt-field-file";
 
-const LktFieldFileSelect = {
+const LktFieldFileSelect: Plugin = {
     install: (app: App) => {
         // Register plugin components
         if (app.component('lkt-field-file-select') === undefined) app.component('lkt-field-file-select', fieldFileSelect);
