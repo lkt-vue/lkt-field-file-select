@@ -5,7 +5,7 @@ import M from "lkt-field-file";
 const R = { class: "lkt-field-file-select" }, F = /* @__PURE__ */ b({
   __name: "LktFieldFileSelect",
   props: {
-    modelValue: { type: String, default: "" },
+    modelValue: { type: [String, Array], default: "" },
     name: { type: String, default: D(16) },
     label: { type: String, default: "" },
     uploadResource: { type: String, default: "" },
@@ -49,9 +49,9 @@ const R = { class: "lkt-field-file-select" }, F = /* @__PURE__ */ b({
   },
   emits: ["update:modelValue"],
   setup(e, { emit: u }) {
-    const s = e, c = u, o = a(s.modelValue), f = a(null), p = a(null), i = a("");
+    const s = e, c = u, o = a(s.modelValue), f = a(null), y = a(null), i = a("");
     h(o, (l) => c("update:modelValue", l));
-    const y = () => {
+    const p = () => {
     }, m = (l) => {
       console.log("uploaded file", "r: ", l);
     };
@@ -87,7 +87,7 @@ const R = { class: "lkt-field-file-select" }, F = /* @__PURE__ */ b({
           modelValue: i.value,
           "onUpdate:modelValue": t[1] || (t[1] = (d) => i.value = d),
           ref_key: "fileInput",
-          ref: p,
+          ref: y,
           resource: e.uploadResource,
           "resource-data": e.uploadResourceData,
           accept: e.accept,
@@ -95,7 +95,7 @@ const R = { class: "lkt-field-file-select" }, F = /* @__PURE__ */ b({
           "read-mode": e.readMode,
           disabled: e.disabled,
           readonly: e.readonly,
-          onUploading: y,
+          onUploading: p,
           onUploadSuccess: m
         }, null, 8, ["modelValue", "resource", "resource-data", "accept", "palette", "read-mode", "disabled", "readonly"])) : w("", !0)
       ]);

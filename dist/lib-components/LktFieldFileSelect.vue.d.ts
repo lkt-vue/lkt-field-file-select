@@ -1,7 +1,7 @@
 import { Option } from "lkt-field-select/dist/index";
 declare const _default: import("vue").DefineComponent<{
     modelValue: {
-        type: StringConstructor;
+        type: (StringConstructor | ArrayConstructor)[];
         default: string;
     };
     name: {
@@ -173,7 +173,7 @@ declare const _default: import("vue").DefineComponent<{
     "update:modelValue": (...args: any[]) => void;
 }, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
-        type: StringConstructor;
+        type: (StringConstructor | ArrayConstructor)[];
         default: string;
     };
     name: {
@@ -357,7 +357,7 @@ declare const _default: import("vue").DefineComponent<{
     tabindex: number;
     resource: string;
     accept: string;
-    modelValue: string;
+    modelValue: string | unknown[];
     uploadResource: string;
     uploadResourceData: Record<string, any>;
     palette: string;

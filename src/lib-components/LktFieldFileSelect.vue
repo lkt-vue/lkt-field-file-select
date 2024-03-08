@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import {ref, watch} from "vue";
 import {generateRandomString} from "lkt-string-tools";
+//@ts-ignore
 import {Option} from "lkt-field-select/dist/index";
 import {HTTPResponse} from "lkt-http-client";
 
 const props = defineProps({
-    modelValue: {type: String, default: ''},
+    modelValue: {type: [String, Array], default: ''},
     name: {type: String, default: generateRandomString(16)},
     label: {type: String, default: ''},
     uploadResource: {type: String, default: ''},
